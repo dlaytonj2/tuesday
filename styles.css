@@ -1,0 +1,75 @@
+:root {
+  --bg-a: #08122a;
+  --bg-b: #16305c;
+  --panel: #d9e7ff;
+  --ink: #0f1d35;
+  --accent: #f7a531;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--panel);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.14), transparent 42%),
+    radial-gradient(circle at 75% 10%, rgba(116, 208, 255, 0.2), transparent 45%),
+    linear-gradient(165deg, var(--bg-a), var(--bg-b));
+}
+
+.shell {
+  width: min(1240px, 96vw);
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0 8px;
+  letter-spacing: 0.06em;
+}
+
+#status-line {
+  margin: 0 0 12px;
+  min-height: 1.5em;
+  color: #eef5ff;
+}
+
+#game-canvas {
+  width: 100%;
+  border: 3px solid rgba(235, 245, 255, 0.7);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #74c2ff 0%, #3f8fdd 35%, #1b4b96 100%);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  background: #ecf4ff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffffff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
